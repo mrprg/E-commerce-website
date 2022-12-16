@@ -7,6 +7,7 @@ const Container = styled.div`
   height: 100vh;
   display: flex; 
   position: relative;
+  overflow: hidden;
 `;
 
 const Arrow = styled.div`
@@ -29,6 +30,7 @@ const Arrow = styled.div`
 
 const Wrapper = styled.div`
   height: 100%;
+  display: flex;
 `;
 
 const Slide = styled.div`
@@ -79,6 +81,26 @@ const Slider = () => {
           </ImgContainer>
           <InfoContainer>
               <Title>WINTER SALE!!</Title>
+              <Description>DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.</Description>
+              <Button>SHOW NOW</Button>
+          </InfoContainer>
+        </Slide>
+        <Slide>
+          <ImgContainer>
+              <Image src='https://i.pinimg.com/originals/79/a6/bb/79a6bb483e693c5f4c73130434478bc0.jpg'/>
+          </ImgContainer>
+          <InfoContainer>
+              <Title>POPULAR SALE!!</Title>
+              <Description>DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.</Description>
+              <Button>SHOW NOW</Button>
+          </InfoContainer>
+        </Slide>
+        <Slide>
+          <ImgContainer>
+              <Image src='https://i.pinimg.com/originals/79/a6/bb/79a6bb483e693c5f4c73130434478bc0.jpg'/>
+          </ImgContainer>
+          <InfoContainer>
+              <Title>SUMMER SALE!!</Title>
               <Description>DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.</Description>
               <Button>SHOW NOW</Button>
           </InfoContainer>
