@@ -13,7 +13,7 @@ export const sliderItems = [
     },
     {
         id: 3,
-        img: "https://th.bing.com/th/id/R.130b1cad8d069c270b4831cd33a0f8d9?rik=rZSt055H%2fbBBVA&pid=ImgRaw&r=0",
+        img: "https://us03-imgcdn.ymcart.com/47022/2020/07/23/6/7/675d6dd24b048aaa.jpg",
         title: "SUMMER SALE!!",
         description: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
     },
