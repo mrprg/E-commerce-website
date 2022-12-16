@@ -50,6 +50,22 @@ const InfoContainer = styled.div`
     padding: 50px;
 `
 
+const Title = styled.h1`
+    font-size: 40px;
+`
+const Description = styled.p`
+    margin: 45px 50px 45px 0px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 3px;
+`
+const Button = styled.button`
+    padding: 10px;
+    font-size: 20px;
+    background-color: transparent;
+    cursor: pointer;
+`
+
 const Slider = () => {
   return (
     <Container>
@@ -61,7 +77,11 @@ const Slider = () => {
           <ImgContainer>
               <Image src='https://i.pinimg.com/originals/79/a6/bb/79a6bb483e693c5f4c73130434478bc0.jpg'/>
           </ImgContainer>
-          <InfoContainer></InfoContainer>
+          <InfoContainer>
+              <Title>WINTER SALE!!</Title>
+              <Description>DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.</Description>
+              <Button>SHOW NOW</Button>
+          </InfoContainer>
         </Slide>
       </Wrapper>
       <Arrow directon="right">
