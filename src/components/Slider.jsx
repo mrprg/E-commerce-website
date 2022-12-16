@@ -23,8 +23,8 @@ const Arrow = styled.div`
     position: absolute;
     top: 0;
     bottom: 0;
-    left: ${props => props.directon === "left" && "10px"};
-    right: ${props => props.directon === "right" && "10px"};
+    left: ${props => props.direction === "left" && "10px"};
+    right: ${props => props.direction === "right" && "10px"};
     margin: auto;
     cursor: pointer;
     opacity: 0.5;
@@ -34,7 +34,7 @@ const Arrow = styled.div`
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
-  transform: translateX(0vw)
+  transform: translateX(${(props) => props.slideIndex * -100}vh)
 `;
 
 const Slide = styled.div`
@@ -75,15 +75,19 @@ const Button = styled.button`
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
 
-  const handleClick = () => {
-
+  const handleClick = (direction) => {
+      if( direction ==="left" ) {
+          setSlideIndex(slideIndex > 0 ? slideIndex-1: 2)
+      } else {
+        setSlideIndex(slideIndex < 2 ? slideIndex +1 : 0)
+      }
   }
   return (
     <Container>
-      <Arrow directon="left" onClick={() => handleClick("left")} >
+      <Arrow direction='left' onClick={() => handleClick("left")} >
         <ArrowLeftOutlined />
       </Arrow>
-      <Wrapper>
+      <Wrapper slideIndex={slideIndex}>
         { sliderItems.map((item) => (
                 <Slide>
                     <ImgContainer>
@@ -97,7 +101,7 @@ const Slider = () => {
               </Slide>
         )) }
       </Wrapper>
-      <Arrow directon="right" onClick={() => handleClick("right")}>
+      <Arrow direction='right' onClick={() => handleClick("right")}>
         <ArrowRightOutlined />
       </Arrow>
     </Container>
