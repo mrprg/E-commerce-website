@@ -25,6 +25,29 @@ const Arrow = styled.div`
     margin: auto;
     cursor: pointer;
     opacity: 0.5;
+`;
+
+const Wrapper = styled.div`
+  height: 100%;
+`;
+
+const Slide = styled.div`
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+`
+const ImgContainer = styled.div`
+    height: 100%;
+    flex: 1;
+`
+const Image = styled.img`
+    height: 80%;
+`
+
+const InfoContainer = styled.div`
+    flex; 1;
+    padding: 50px;
 `
 
 const Slider = () => {
@@ -33,6 +56,14 @@ const Slider = () => {
       <Arrow directon="left">
         <ArrowLeftOutlined />
       </Arrow>
+      <Wrapper>
+        <Slide>
+          <ImgContainer>
+              <Image src='https://i.pinimg.com/originals/79/a6/bb/79a6bb483e693c5f4c73130434478bc0.jpg'/>
+          </ImgContainer>
+          <InfoContainer></InfoContainer>
+        </Slide>
+      </Wrapper>
       <Arrow directon="right">
         <ArrowRightOutlined />
       </Arrow>
