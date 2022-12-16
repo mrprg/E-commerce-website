@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
     height: 60px;
+    margin-bottom:30px;
 `;
 
 const Wrapper = styled.div`
