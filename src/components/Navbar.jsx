@@ -1,7 +1,6 @@
 import { MenuItem } from '@material-ui/core';
 import { Search, ShoppingCartOutlined } from '@material-ui/icons';
 import { Badge } from '@mui/material';
-// import { MailIcon }
 import React from 'react';
 import styled from 'styled-components';
 
