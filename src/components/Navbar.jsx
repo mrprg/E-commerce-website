@@ -72,12 +72,12 @@ const Navbar = () => {
                 </TextLink>
             </Center>
             <Right>
-              <Link to='/register'>
+              <TextLink to='/register'>
                 <MenuItem>REGISTER</MenuItem>
-              </Link>
-              <Link to='/login'>
+              </TextLink>
+              <TextLink to='/login'>
                     <MenuItem>SIGN IN</MenuItem>
-              </Link>
+              </TextLink>
               <MenuItem>
                  <Badge badgeContent={4} color="primary">
                       <ShoppingCartOutlined />
