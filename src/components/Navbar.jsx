@@ -40,6 +40,11 @@ const Center = styled.div`
     text-align: center;
 `
 
+const TextLink = styled(Link)`
+    text-decoration: none;
+    color: black;
+`
+
 const Logo = styled.h1`
     font-weight: bold:
 `
@@ -62,9 +67,9 @@ const Navbar = () => {
               </SearchContainer>
             </Left>
             <Center>
-                <Link to='/'>
+                <TextLink to='/'>
                     <Logo>Asadi.</Logo>
-                </Link>
+                </TextLink>
             </Center>
             <Right>
               <Link to='/register'>
