@@ -5,6 +5,7 @@ import ProductList from './pages/ProductList';
 import Product from './pages/Product';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Cart from './pages/Cart'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route path='/login' element={ [<Login />] } />
             <Route path='/product' element={ [<Product />] } />
             <Route path='/productlist' element={ [<ProductList />] } />
+            <Route path='/cart' element={ [<Cart />] } />
         </Routes>
     </div>
     </Router>
