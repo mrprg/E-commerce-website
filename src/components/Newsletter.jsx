@@ -15,6 +15,7 @@ const Container = styled.div`
 const Title = styled.h1`
   font-size: 70px;
   margin-bottom: 20px;
+  ${mobile({ textAlign: "center", fontSize: "50px" })}
 `;
 
 const Desc = styled.div`
@@ -31,6 +32,7 @@ const InputContainer = styled.div`
   display: flex;
   justify-content: space-between;
   border: 1px solid lightgray;
+  ${mobile({ textAlign: "center", width: "60%" })}
 `;
 
 const Input = styled.input`
