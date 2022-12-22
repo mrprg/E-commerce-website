@@ -4,6 +4,7 @@ import { Badge } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { useStateValue } from '../context/Stateprovider';
 
 const Container = styled.div`
     height: 60px;
@@ -56,6 +57,7 @@ const Right = styled.div`
 `;
 
 const Navbar = () => {
+    const [{ basket }] = useStateValue();
   return (
     <Container>
         <Wrapper>
@@ -80,7 +82,7 @@ const Navbar = () => {
               </TextLink>
               <TextLink to='/cart'>
                     <MenuItem>
-                        <Badge badgeContent={0} color="primary">
+                        <Badge badgeContent={basket.length} color="primary">
                             <ShoppingCartOutlined />
                         </Badge> 
                     </MenuItem>
