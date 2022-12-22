@@ -2,6 +2,7 @@ import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from '@m
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { useStateValue } from '../context/Stateprovider';
 
 
 const Info = styled.div`
@@ -68,12 +69,25 @@ const TextLink = styled(Link)`
 `;
 
 const ProductItem = ({ item }) => {
+  const [{ basket }, dispatch] = useStateValue();
+
+  const addToBasket = () => {
+    //dispatch item to data layer
+    dispatch ({
+      type: 'ADD_TO_BASKET',
+      item: {
+        id: item.id,
+        title: item.title,
+        image: item.img,
+      }
+    })
+  }
   return (
     <Container>
         <Circle />
         <Image src={item.img} />
         <Info>
-            <Icon>
+            <Icon onClick={addToBasket}>
                 <ShoppingCartOutlined />
             </Icon>
             <Icon>
