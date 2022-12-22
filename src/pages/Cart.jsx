@@ -4,6 +4,7 @@ import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { mobile } from "../responsive";
+import { useStateValue } from '../context/Stateprovider';
 
 const Container = styled.div``;
 
@@ -154,6 +155,7 @@ const Button = styled.button`
 `;
 
 const Cart = () => {
+  const [{ basket }] = useStateValue();
   return (
     <Container>
       <Navbar />
@@ -163,7 +165,7 @@ const Cart = () => {
         <Top>
           <TopButton>CONTINUE SHOPPING</TopButton>
           <TopTexts>
-            <TopText>Shopping Bag(2)</TopText>
+            <TopText>Shopping Bag({basket.length})</TopText>
             <TopText>Your Wishlist (0)</TopText>
           </TopTexts>
           <TopButton type="filled">CHECKOUT NOW</TopButton>
