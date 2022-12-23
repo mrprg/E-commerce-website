@@ -66,6 +66,7 @@ const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
+  font-weight: 600;
   ${mobile({ fontSize: "10px", marginLeft: "10px", fontWeight: "800" })}
 `;
 
